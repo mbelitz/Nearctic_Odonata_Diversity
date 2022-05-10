@@ -7,21 +7,11 @@ A 7zip containing a csv has all of our thresholded SDM outputs predicting the di
 
 ## data
 Contains data that was used to generate figures and SDM outputs.
-
-### sdmOutputs.7z
-Zip file containing sdm outputs of each species binded into a single csv.
-
-### nObs_per_cell_aggregate15
-Data used to generate Figure 8, where the number of observations were aggregated per cell. 
-
-### rangeSize_byTraits
-Data used to generate Figure 5, where the range size per species is stored. 
-
-### regular_richnessCSVs
-Subdirectory with richness csvs with richness values listed for each cell broken up by different traits or IUCN status.
-
-### regions
-Subdirectory with shapefiles used for mapping.
+- sdmOutputs.7z: Zip file containing sdm outputs of each species binded into a single csv.
+- nObs_per_cell_aggregate15: Data used to generate Figure 8, where the number of observations were aggregated per cell. 
+- rangeSize_byTraits: Data used to generate Figure 5, where the range size per species is stored. 
+- regular_richnessCSVs: Subdirectory with richness csvs with richness values listed for each cell broken up by different traits or IUCN status.
+- regions: Subdirectory with shapefiles used for mapping.
 
 ## Biodiverse Outputs
 Overall richness and CWE values, including all species and all cells where Nearctic species are predicted to occur.
