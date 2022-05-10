@@ -20,4 +20,4 @@ Overall richness and CWE values, including all species and all cells where Nearc
 Scripts used to generate figures
 
 ## sdmPipelineScripts
-Scripts used to generate functions that were ultimately used in the sdm_pipeline.R script which was used to generate species-specific SDMs for each species of dragonfly found in the Nearctic. 
+Scripts hosting functions that were ultimately used in the sdm_pipeline.R script which was used to generate species-specific SDMs for each species of dragonfly found in the Nearctic. 
