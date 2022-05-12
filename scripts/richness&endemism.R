@@ -1,3 +1,8 @@
+# Run lines 3 & 4 if an older version of sf is needed, newer versions may cause errors
+
+#purl <- "http://cran.us.r-project.org/src/contrib/Archive/sf/sf_0.9-6.tar.gz"
+#install.packages(purl, repos=NULL, type="source")
+
 library(ggplot2)
 library(dplyr)
 library(rnaturalearth)
