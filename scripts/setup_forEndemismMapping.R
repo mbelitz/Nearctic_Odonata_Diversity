@@ -7,7 +7,7 @@ regularize <- function(x){
   csv_df <- read.csv(x) %>%
     na.omit()
 
-  r <- raster("Biodiverse_Ouputs/biod_ENDC_CWE.tif")
+  r <- raster("Biodiverse_Outputs/biod_ENDC_CWE.tif")
   rdf <- raster::as.data.frame(r, xy = T)%>%
     mutate(z = 1:nrow(.))
   rxyz <- rdf %>%

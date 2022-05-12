@@ -63,7 +63,7 @@ americas_clip <- americas %>%
   as_Spatial()
 
 ## read in forest only data
-source('scripts/regularize_endemismCSVs.R')
+source('scripts/setup_forEndemismMapping.R')
 
 ## mapping options
 # then western hemisphere
@@ -150,7 +150,7 @@ len_end_mask <- projectRaster(len_end_mask, crs = proj_str)
 
 len_p <- ggplot() +
   geom_tile(na.omit(raster::as.data.frame(len_end_mask, xy = T)),
-            mapping = aes(x = x , y = y, fill = layer, color = layer)) +
+            mapping = aes(x = x , y = y, fill = CWE, color = CWE)) +
   geom_sf(americas_proj, mapping = aes(), fill = NA,
           color = "grey75", size = 0.15) +
   #scale_fill_gradient(low = "#E8E8E8",
@@ -208,14 +208,14 @@ lot_p <- ggplot() +
 ggsave(lot_p, filename = "figures/nearctic/Endemism_loticSpp_nearcticExtent.png", dpi = 450)
 
 ## cow plot everything together
-cp <- cowplot::plot_grid(fp, nfp,
-                         len_p, lot_p, ncol = 2, nrow = 2,
-                         labels = c("A", "B", "C", "D"),
-                         label_size = 20)
-
-ggsave(cp, filename = "figures/nearctic/FigureX_endemismTraits.png", dpi = 450,
-       width = 14, height = 10)
-
+#cp <- cowplot::plot_grid(fp, nfp,
+#                         len_p, lot_p, ncol = 2, nrow = 2,
+#                         labels = c("A", "B", "C", "D"),
+#                         label_size = 20)
+#
+#ggsave(cp, filename = "figures/nearctic/FigureX_endemismTraits.png", dpi = 450,
+#       width = 14, height = 10)
+#
 ga <- ggpubr::ggarrange(fp, nfp,
                         len_p, lot_p,
                         ncol = 2, nrow = 2,
